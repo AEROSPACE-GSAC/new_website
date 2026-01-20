@@ -4,6 +4,9 @@ backend:
   branch: main
   base_url: https://sveltia-cms-auth.itarun17.workers.dev
 
+site_url: https://aerospace-gsac.github.io/new_website/
+display_url: https://aerospace-gsac.github.io/new_website/
+
 media_folder: static/media
 public_folder: /media
 
