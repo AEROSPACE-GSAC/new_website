@@ -1,0 +1,45 @@
+import lume from "lume/mod.ts";
+import date from "lume/plugins/date.ts";
+import pagefind from "lume/plugins/pagefind.ts";
+import robots from "lume/plugins/robots.ts";
+import icons from "lume/plugins/icons.ts";
+import esbuild from "lume/plugins/esbuild.ts";
+import katex from "lume/plugins/katex.ts";
+import tailwindcss from "lume/plugins/tailwindcss.ts";
+import lightningcss from "lume/plugins/lightningcss.ts";
+import check_urls from "lume/plugins/check_urls.ts";
+import favicon from "lume/plugins/favicon.ts";
+import picture from "lume/plugins/picture.ts";
+import transform_images from "lume/plugins/transform_images.ts";
+import metas from "lume/plugins/metas.ts";
+import validate_html from "lume/plugins/validate_html.ts";
+import feed from "lume/plugins/feed.ts";
+import sitemap from "lume/plugins/sitemap.ts";
+import seo from "lume/plugins/seo.ts";
+import minify_html from "lume/plugins/minify_html.ts";
+import brotli from "lume/plugins/brotli.ts";
+
+const site = lume();
+
+site.copy("static", ".");
+site.use(date());
+site.use(pagefind());
+site.use(robots());
+site.use(icons());
+site.use(esbuild());
+site.use(katex());
+site.use(tailwindcss());
+site.use(lightningcss());
+site.use(check_urls());
+site.use(favicon());
+site.use(picture());
+site.use(transform_images());
+site.use(metas());
+site.use(validate_html());
+site.use(feed());
+site.use(sitemap());
+site.use(seo());
+site.use(minify_html());
+site.use(brotli());
+
+export default site;
